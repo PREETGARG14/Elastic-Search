@@ -3,7 +3,7 @@
 <img src="images/1.png">
 
 
-#### What is Elastic Search ?
+### What is Elastic Search ?
 Elasticsearch is an open source analytics and full-text search engine.It’s often used for enabling search functionality for applications.
 <img src="images/2.png">
 
@@ -45,7 +45,8 @@ You can then set up alerting for this and be notified whenever something unusual
 
 That’s because this way, you really learn the heart of it all and you will then be able to build on top of that knowledge if you need to do other things with Elasticsearch.
 Okay, so enough about what you can do with Elasticsearch for now.
-#### So how does it work?
+
+### So how does it work?
 In Elasticsearch, data is stored as documents, which is just a unit of information. A document in Elasticsearch corresponds to a row in a relational database, and can represent a person, a sale, or anything else you want.
 A document then contains fields, which correspond to columns in a relational database.
 A document is essentially just a JSON object, so to add a person as a document, you just send a JSON object describing a person to Elasticsearch, such as the example you see below.
