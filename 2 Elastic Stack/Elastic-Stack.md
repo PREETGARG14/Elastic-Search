@@ -1,32 +1,18 @@
+### What is Elastic Stack ?
 This repository focuses on Elasticsearch, but I want to take a moment to talk about a few other technologies that are related to Elasticsearch.
-Together with Elasticsearch, they form what’s referred to as the Elastic Stack, so let’s discuss a bit about that. If you already know what the Elastic Stack is all about or if you just care about Elasticsearch, then you are welcome to skip this Elastic Stack section , but I do recommend that you stick around.
+Together with Elasticsearch, they form what’s referred to as the **Elastic Stack**, so let’s discuss a bit about that. If you already know what the Elastic Stack is all about or if you just care about Elasticsearch, then you are welcome to skip this Elastic Stack section , but I do recommend that you stick around.
 The Elastic Stack consists of technologies developed and maintained by the company behind Elasticsearch.
 <img src="images/1.png">
 We just talked about Elasticsearch, which is the heart of the Elastic Stack, meaning that the technologies that I am about to tell you about, generally interact with Elasticsearch, although it’s optional for some of them. However, there is a strong synergy between the technologies, so they are frequently used together for various purposes.
 
-Alright, so let’s begin by talking about something called Kibana.
+Alright, so let’s begin by talking about something called **Kibana**.
 
-Kibana is an analytics and visualization platform, which lets you easily visualize data from
+#### What is Kibana ?
+<img src="images/2.png">
+Kibana is an analytics and visualization platform, which lets you easily visualize data from Elasticsearch and analyze it to make sense of it. You can think of **Kibana as an Elasticsearch dashboard** where you can create visualizations such as pie charts, line charts, and many others. You can plot your website’s visitors onto a map and show traffic in real time, for instance. You can aggregate website traffic by browser and find out which browsers are important to support based on your particular audience.
+Kibana is also where you configure change detection and forecasting that I mentioned in the previous Section <a href="doc:introduction" target="_blank">Introduction</a> .
 
-Elasticsearch and analyze it to make sense of it.
-
-You can think of Kibana as an Elasticsearch dashboard where you can create visualizations
-
-such as pie charts, line charts, and many others.
-
-You can plot your website’s visitors onto a map and show traffic in real time, for instance.
-
-You can aggregate website traffic by browser and find out which browsers are important
-
-to support based on your particular audience.
-
-Kibana is also where you configure change detection and forecasting that I mentioned
-
-in the previous lecture.
-
-Kibana also provides an interface to manage certain parts of Elasticsearch, such as authentication
-
-and authorization.
+Kibana also provides an interface to manage certain parts of Elasticsearch, such as authentication and authorization.
 
 Generally speaking, you can think of Kibana as a web interface to the data that is stored
 
