@@ -1,4 +1,5 @@
 ### What is Elastic Stack ?
+___
 This repository focuses on Elasticsearch, but I want to take a moment to talk about a few other technologies that are related to Elasticsearch.
 Together with Elasticsearch, they form what’s referred to as the **Elastic Stack**, so let’s discuss a bit about that. If you already know what the Elastic Stack is all about or if you just care about Elasticsearch, then you are welcome to skip this Elastic Stack section , but I do recommend that you stick around.
 The Elastic Stack consists of technologies developed and maintained by the company behind Elasticsearch.
@@ -8,73 +9,31 @@ We just talked about Elasticsearch, which is the heart of the Elastic Stack, mea
 Alright, so let’s begin by talking about something called **Kibana**.
 
 #### What is Kibana ?
+___
 <img src="images/2.png">
 Kibana is an analytics and visualization platform, which lets you easily visualize data from Elasticsearch and analyze it to make sense of it. You can think of **Kibana as an Elasticsearch dashboard** where you can create visualizations such as pie charts, line charts, and many others. You can plot your website’s visitors onto a map and show traffic in real time, for instance. You can aggregate website traffic by browser and find out which browsers are important to support based on your particular audience.
-Kibana is also where you configure change detection and forecasting that I mentioned in the previous Section <a href="doc:introduction" target="_blank">Introduction</a> .
+<img src="images/5.png">
+Kibana is also where you configure change detection and forecasting that I mentioned in the previous Section <a href="https://github.com/PREETGARG14/Elastic-Search/blob/main/1%20Introduction/Introduction.md#elastic-search" target="_blank">Introduction</a> .
 
-Kibana also provides an interface to manage certain parts of Elasticsearch, such as authentication and authorization.
+Kibana also provides an interface to manage certain parts of Elasticsearch, such as authentication and authorization. Generally speaking, you can think of Kibana as a web interface (UI) to the data that is stored within Elasticsearch. It uses the data from Elasticsearch and basically just sends queries using the same REST API that I previously mentioned. It just provides an interface for building those queries and lets you configure how to display the results. This can save you a lot of time because you don’t have to implement all of this yourself. You can build dashboards where you place a number of metrics and visualizations.
+<img src="images/3.png">
 
-Generally speaking, you can think of Kibana as a web interface to the data that is stored
+You can create a dashboard for system administrators that monitors the performance of servers, such as CPU and memory usage. You can then create a dashboard for developers which monitors the number of application errors and API response times. A third dashboard could be a dashboard with KPIs (being short for Key Points of Interest) for management, keeping track of how the business performs, such as the number of sales, revenue, etc.
+<img src="images/4.png">
+As you can see, you are likely to store a lot of different kinds of data in Elasticsearch, apart from data that you want to search and present to your external users. In fact, you might not even use Elasticsearch for implementing search functionality at all; using it as an analytics platform together with Kibana, is a perfectly valid and common use case as well.
 
-within Elasticsearch.
+You can see a couple of screenshots from the Kibana interface, giving you an idea of what it looks like.
+<img src="images/6.png"> <img src="images/7.png">
+I cannot cover all of the features of Kibana here, because this is just a quick overview of the Elastic Stack.<a href="https://demo.elastic.co/app/dashboards#/view/welcome_dashboard?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))" target="_blank">Check Out Kibana Here.</a> .
 
-It uses the data from Elasticsearch and basically just sends queries using the same REST API
+Next up, we have a tool named **Logstash**.
 
-that I previously mentioned.
+#### What is Logstash ?
+___
+<img src="images/8.png">
 
-It just provides an interface for building those queries and lets you configure how to
-
-display the results.
-
-This can save you a lot of time because you don’t have to implement all of this yourself.
-
-You can build dashboards where you place a number of metrics and visualizations.
-
-You can create a dashboard for system administrators that monitors the performance of servers,
-
-such as CPU and memory usage.
-
-You can then create a dashboard for developers which monitors the number of application errors
-
-and API response times.
-
-A third dashboard could be a dashboard with KPIs (being short for Key Points of Interest)
-
-for management, keeping track of how the business performs, such as the number of sales, revenue, etc.
-
-As you can see, you are likely to store a lot of different kinds of data in Elasticsearch,
-
-apart from data that you want to search and present to your external users.
-
-In fact, you might not even use Elasticsearch for implementing search functionality at all;
-
-using it as an analytics platform together with Kibana, is a perfectly valid and common
-
-use case as well.
-
-On your screen now, you can see a couple of screenshots from the Kibana interface, giving
-
-you an idea of what it looks like.
-
-I cannot cover all of the features of Kibana here, because this is just a quick overview
-
-of the Elastic Stack.
-
-There is a public demo of Kibana though, which has some pre-configured dashboards and sample data.
-
-So if you are curious to see what it looks like in action, then be sure to check that out.
-
-I have attached a link to it to this lecture.
-
-Next up, we have a tool named Logstash.
-
-Traditionally, Logstash has been used to process logs from applications and send them to Elasticsearch,
-
-hence the name.
-
-That’s still a popular use case, but Logstash has evolved into a more general purpose tool,
-
-meaning that Logstash is a data processing pipeline.
+Traditionally, Logstash has been used to process logs from applications and send them to Elasticsearch, hence the name. That’s still a popular use case, but Logstash has evolved into a more general purpose tool, meaning that **Logstash is a data processing pipeline**.
+<img src="images/9.png">
 
 The data that Logstash receives, will be handled as events, which can be anything of your choice.
 
