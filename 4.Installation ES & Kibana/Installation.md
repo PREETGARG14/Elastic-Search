@@ -8,19 +8,19 @@ Cloud setup for 14 day free trail - <a href="https://www.elastic.co/cloud/cloud-
   * Set password
   * You redirected to Elastic cloud console
   * Click on start free trail
-  * Select Elastic Stack <img src="images/2.png" width="80" height="80">
-  * Select hardware profile as default one <img src="images/3.png" width="80" height="80">
+  * Select Elastic Stack <img src="images/2.png">
+  * Select hardware profile as default one <img src="images/3.png">
   * Make Deployment settings as same/default 
   * You get ES deployment creds - download them as they visible only once 
-  * Your ES configured now <img src="images/4.png" width="80" height="80">
+  * Your ES configured now <img src="images/4.png">
   * You can open Kibana dashboard too with sample data.
   
 ### Traditional Method 
 ___
-Download ES - <a href="https://www.elastic.co/downloads/elasticsearch">Elastic Download Page<a/>
+**Download ES** - <a href="https://www.elastic.co/downloads/elasticsearch">Elastic Download Page<a/>
 <img src="images/5.png">
   
-Download Kibana - <a href="https://www.elastic.co/downloads/kibana">Kibana Download Page<a/>
+**Download Kibana** - <a href="https://www.elastic.co/downloads/kibana">Kibana Download Page<a/>
 <img src="images/5.png"> 
   Steps -
   * 
