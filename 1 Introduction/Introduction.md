@@ -36,7 +36,7 @@ Perhaps you are keeping track of how many phone calls are made to a support depa
 Or perhaps you are keeping track of the number of visitors on a website, and you want to use that to forecast if and when you need to add additional web servers.
 <img src="images/7.png">
 
-These were just a couple of examples, so you can of course forecast many other things. Another thing you can do, is anomality detection.
+These were just a couple of examples, so you can of course forecast many other things. Another thing you can do, is **anomality detection**.
 If your website normally has 50,000 visitors per day, something is probably wrong if it drops to 5,000, for instance.
 Monitoring this can be time consuming, so what you can do instead, is to let machine learning learn the “norm” and let you know when there is an anomality, i.e. when
 there is a significant deviation from the normal behavior. This is all done for you, so you don’t have to specify rules, thresholds, etc.
