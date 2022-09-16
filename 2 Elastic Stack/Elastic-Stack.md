@@ -98,86 +98,22 @@ Now we just have one thing left to cover; something called Beats.
 #### What is Beats ?
 ___
 <img src="images/15.png">
-Beats is a collection of so-called data shippers.They are lightweight agents with a single purpose that you install on servers, which
+Beats is a collection of so-called data shippers.They are lightweight agents with a single purpose that you install on servers, which then send data to Logstash or Elasticsearch. There are a number data shippers - called beats - that collect different kinds of data and serve different purposes.
 
-then send data to Logstash or Elasticsearch.
+**Filebeat** - is used for collecting log files and sending the log entries off to either Logstash or Elasticsearch. Filebeat ships with modules for common log files, such as nginx, the Apache web server, or MySQL. This is very useful for collecting log files such as access logs or error logs.
 
-There are a number data shippers - called beats - that collect different kinds of data
+**Metricbeat** - collects system-level and/or service metrics.You can use it for collecting CPU and memory usage for the operating system, and any services running on the system as well. Metricbeat also ships with modules for popular services such as nginx or MySQL, so you can monitor how they perform.<br/>
+There are more beats available as you can see here, but Filebeat and Metricbeat are the ones that are most commonly used, so be sure to check out the documentation in case you need something other than we have just talked about.
+<img src="images/16.png">
+___
 
-and serve different purposes.
-
-For example, there is a beat named Filebeat, which is used for collecting log files and
-
-sending the log entries off to either Logstash or Elasticsearch.
-
-Filebeat ships with modules for common log files, such as nginx, the Apache web server,
-
-or MySQL.
-
-This is very useful for collecting log files such as access logs or error logs.
-
-Another beat worth mentioning, is Metricbeat, which collects system-level and/or service metrics.
-
-You can use it for collecting CPU and memory usage for the operating system, and any services
-
-running on the system as well.
-
-Metricbeat also ships with modules for popular services such as nginx or MySQL, so you can
-
-monitor how they perform.
-
-There are more beats available as you can see here, but Filebeat and Metricbeat are
-
-the ones that are most commonly used, so be sure to check out the documentation in case
-
-you need something other than we have just talked about.
-
-Alright, so let’s put all of the pieces together now.
-
+#### Alright, so let’s put all of the pieces together now.
 The center of it all is Elasticsearch which contains the data.
+<img src="images/17.png">
+* Ingesting data into Elasticsearch can be done with Beats and/or Logstash, but also directly through Elasticsearch’s API.
+* Kibana is a user interface that sits on top of Elasticsearch and lets you visualize the data that it retrieves from Elasticsearch through the API. There is nothing Kibana does that you cannot build yourself, and all of the data that it retrieves is accessible through the Elasticsearch API. That being said, it’s a really powerful tool that will likely save you a lot of time, as you probably won’t have to build your own dashboards from scratch.
+* Then we have X-Pack which enables additional features, such as machine learning for Elasticsearch and Kibana, or management of Logstash pipelines in Kibana.
 
-Ingesting data into Elasticsearch can be done with Beats and/or Logstash, but also directly
+This is all referred to as the Elastic Stack. You might, however, have heard of something called the **ELK stack** before. This refers to Elasticsearch, Logstash, and Kibana, because these three tools are so frequently used together.
 
-through Elasticsearch’s API.
-
-Kibana is a user interface that sits on top of Elasticsearch and lets you visualize the
-
-data that it retrieves from Elasticsearch through the API.
-
-There is nothing Kibana does that you cannot build yourself, and all of the data that it
-
-retrieves is accessible through the Elasticsearch API.
-
-That being said, it’s a really powerful tool that will likely save you a lot of time,
-
-as you probably won’t have to build your own dashboards from scratch.
-
-Then we have X-Pack which enables additional features, such as machine learning for Elasticsearch
-
-and Kibana, or management of Logstash pipelines in Kibana.
-
-This is all referred to as the Elastic Stack.
-
-You might, however, have heard of something called the ELK stack before.
-
-This refers to Elasticsearch, Logstash, and Kibana, because these three tools are so frequently
-
-used together.
-
-The term originates from before there was something called Beats and X-Pack, creating
-
-what is now known as the Elastic Stack.
-
-So the Elastic Stack is a superset of the ELK stack, but these days you will mainly
-
-refer to the Elastic Stack.
-
-As you can hopefully see, covering all of this in a single course is nearly impossible,
-
-as each of these tools provide so many capabilities, and if I were to include all of them in the
-
-course, I would just barely scratch the surface.
-
-Now that you know what the Elastic Stack is all about, let’s take a moment to talk about
-
-some common architectures and how these technologies are used together.
+The term originates from before there was something called Beats and X-Pack, creating what is now known as the Elastic Stack. So the Elastic Stack is a superset of the ELK stack, but these days you will mainly refer to the Elastic Stack.
