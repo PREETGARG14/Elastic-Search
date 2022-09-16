@@ -59,7 +59,7 @@ In case you are not familiar with RESTful APIs, then don’t worry about it at a
 
 The queries that we send to Elasticsearch are also written in JSON, so the API should be fairly easy to use.
 
-Elasticsearch is written in Java and is built on top of Apache Lucene.
+Elasticsearch is written in **Java** and is built on top of **Apache Lucene**.
 
 Elasticsearch has gained a lot of popularity due to its relative ease of use and the fact that it scales extremely well. While Elasticsearch is easy to get started with for simple things, it is still a very complex technology if you want to make use of its full potential. Since Elasticsearch is distributed by nature, it scales very well in terms of increasing data volumes and query throughput. So even if you need to search through millions of documents, searches are still going to be lightning fast!
 
