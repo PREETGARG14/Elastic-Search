@@ -25,7 +25,7 @@ Elasticsearch is not really a business intelligence solution, but you can indeed
 
 An example would be to store logs from applications and various server system metrics and then analyze these, perhaps with alerting set up.
 You might want to keep track of the number of errors for a web application or the CPU and memory usage of servers, and then show that on a line chart, for instance.
-This is referred to as Application Performance Management - or APM - and is a quite common use case of Elasticsearch and the Elastic Stack.
+This is referred to as **Application Performance Management - or APM** - and is a quite common use case of Elasticsearch and the Elastic Stack.
 
 Another common thing to do, is to send events to Elasticsearch, which can be anything you want, really. Perhaps we are sending sales from physical stores to Elasticsearch, 
 in which case we can analyze which stores sell the most. We can do that with something called aggregations, which you may know from relational databases.
