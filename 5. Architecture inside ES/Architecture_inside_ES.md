@@ -7,7 +7,7 @@ ___
 A node is essentially an instance of Elasticsearch that stores data. To ensure that we can store many terabytes of data if we need to, we can run as many nodes as we want. Each node will then store a part of our data. This way, we can store data on multiple virtual or physical machines, which enables us to store many terabytes of data, even if each machine only has a disk capacity of a few hundred gigabytes.<br/>
 A node refers to an instance of Elasticsearch and not a machine, so you can run any number of nodes on the same machine. This means that on your development machine, you can start up five nodes if you want to, without having to deal with virtual machines or containers.
 
-That being said, you should typically separate things in a production environment so that each node runs on a dedicated machine, a virtual machine, or within a container. You might wonder how all of this is coordinated.** How is the data distributed across the nodes, and how does Elasticsearch know where some given data is stored?**<br/>
+That being said, you should typically separate things in a production environment so that each node runs on a dedicated machine, a virtual machine, or within a container. You might wonder how all of this is coordinated.**How is the data distributed across the nodes, and how does Elasticsearch know where some given data is stored?**<br/>
 We will discuss this in detail in the next couple of lectures, but the short answer to the question is that each node belongs to what is called a cluster.
 
 ### Cluster 
@@ -38,7 +38,7 @@ ___
 
 An index is therefore a collection of documents that have similar characteristics and are logically related. For example, the document that you saw a moment ago, could be stored within an index named "**people**" We could then have a different index named "**departments**," containing a number of departments, each being stored as a document. An index may contain as many documents as you want, so there is no hard limit. When we get to searching for data, you will see that we specify the index that we want to search for documents, meaning that **search queries are actually run against indices**.
 
-**Alright, let's take a short moment to recap on the key takeaways from this page - **
+**Alright, let's take a short moment to recap on the key takeaways from this page -**
 
 * An Elasticsearch cluster is a collection of nodes, which are responsible for storing data.
 * A node refers to a running instance of Elasticsearch, which can be running on a physical or virtual machine, or within a Docker container, for instance.
