@@ -1,0 +1,46 @@
+Now that we have successfully installed Elasticsearch and Kibana, let's talk a bit about the architecture of Elasticsearch. So when we started up Elasticsearch, what actually happened, was that we started up a node.
+
+### Node
+___
+<img src="images/1.png">
+
+A node is essentially an instance of Elasticsearch that stores data. To ensure that we can store many terabytes of data if we need to, we can run as many nodes as we want. Each node will then store a part of our data. This way, we can store data on multiple virtual or physical machines, which enables us to store many terabytes of data, even if each machine only has a disk capacity of a few hundred gigabytes.<br/>
+A node refers to an instance of Elasticsearch and not a machine, so you can run any number of nodes on the same machine. This means that on your development machine, you can start up five nodes if you want to, without having to deal with virtual machines or containers.
+
+That being said, you should typically separate things in a production environment so that each node runs on a dedicated machine, a virtual machine, or within a container. You might wonder how all of this is coordinated.** How is the data distributed across the nodes, and how does Elasticsearch know where some given data is stored?**<br/>
+We will discuss this in detail in the next couple of lectures, but the short answer to the question is that each node belongs to what is called a cluster.
+
+### Cluster 
+___
+<img src="images/2.png">
+
+A cluster is a collection of related nodes that together contain all of our data. We can have many clusters if we want to, but one is usually enough. Clusters are completely independent of each other by default. It is possible to perform cross-cluster searches, but it is not very common to do so. You might run multiple clusters that serve different purposes; for instance, you could have a cluster for powering the search of an e-commerce application, and another for Application Performance Management (abbreviated APM). The reasons for splitting things into multiple clusters, are typically to separate things logically, and to be able to configure things differently. That being said, one cluster is typically enough, so we will be working with a single
+cluster throughout this course.
+
+**But wait a minute, a moment ago I said that we started up a node, so how do we create a cluster?**<br/>
+What actually happened when we started up the node, was that a cluster was formed automatically. When a node starts up, it will either join an existing cluster if configured to do so, or it will create its own cluster consisting of just that node. An Elasticsearch node will always be part of a cluster, even if there are no other nodes. There are some problems with only having a single node in terms of availability and scalability, but for development purposes, it is perfectly fine to have a cluster consisting of a single node. We will get back to these problems soon, but right now I don't want to confuse you with that.
+
+Now that you know what clusters and nodes are, let's take a closer look at how data is organized and stored.
+
+### Document 
+___
+<img src="images/3.png">
+
+Each unit of data that you store within your cluster is called a document.Documents are JSON objects containing whatever data you desire. When you index a document, the original JSON object that you sent to Elasticsearch is stored along with some metadata that Elasticsearch uses internally. If you want to store a person, your object could look something like above image. As you can see, the object contains two fields, being "**name**" and "**country**." You can add any fields that you want, so you are in total control of this object. To the right, you can see an example of how this object would be stored within Elasticsearch. The JSON object that we send to Elasticsearch is stored within a field named "**_source**," and Elasticsearch then stores some metadata together with that object.
+
+**So how are documents organized, you might wonder?**<br/>
+The answer is within indices. Every document within Elasticsearch, is stored within an index. An index groups documents together logically, as well as provide configuration options that are related to scalability and availability, which we will take a look at a bit later.
+
+
+### Index 
+___
+<img src="images/4.png">
+
+An index is therefore a collection of documents that have similar characteristics and are logically related. For example, the document that you saw a moment ago, could be stored within an index named "**people**" We could then have a different index named "**departments**," containing a number of departments, each being stored as a document. An index may contain as many documents as you want, so there is no hard limit. When we get to searching for data, you will see that we specify the index that we want to search for documents, meaning that **search queries are actually run against indices**.
+
+**Alright, let's take a short moment to recap on the key takeaways from this page - **
+
+* An Elasticsearch cluster is a collection of nodes, which are responsible for storing data.
+* A node refers to a running instance of Elasticsearch, which can be running on a physical or virtual machine, or within a Docker container, for instance.
+* Data is stored as documents, with a document being a unit of information. A document can represent anything you want. A few examples are a person, company, product, review, event, etc.
+* Each document belongs to an index, which is a way to logically group together related documents.
