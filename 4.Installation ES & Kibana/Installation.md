@@ -22,5 +22,16 @@ ___
   
 **Download Kibana** - <a href="https://www.elastic.co/downloads/kibana">Kibana Download Page<a/>
 <img src="images/5.png"> 
-  Steps -
-  * 
+  Steps -<br/>
+  Once it get installed 
+  * Check Elasticsearch version - <br/>1. sudo service elasticsearch start<br/>
+                                  2. sudo service elasticsearch status<br/>
+                                  3. curl http://localhost:9200 -to check ES version<br/>
+                                  4. or cd /usr/share/elasticsearch <br/>
+                                  5. sudo ./bin/elasticsearch --version<br/>
+  * Check Kibana version - <br/>1. sudo service kibana start<br/>
+                                  2. sudo service kibana status<br/>
+                                  3. curl http://localhost:9200 -to check kibana version<br/>
+                                  4. or cd /usr/share/kibana <br/>
+                                  5. ./bin/kibana --version<br/>
+  
