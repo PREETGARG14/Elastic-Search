@@ -17,10 +17,12 @@ Cloud setup for 14 day free trail - <a href="https://www.elastic.co/cloud/cloud-
   
 ### Traditional Method 
 ___
-**Download ES** - <a href="https://www.elastic.co/downloads/elasticsearch">Elastic Download Page<a/>
+**Download ES** - <a href="https://www.elastic.co/downloads/elasticsearch">Elastic Download Page<a/> , <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html">Elastic Download Via Cmd<a/>
 <img src="images/5.png">
   
-**Download Kibana** - <a href="https://www.elastic.co/downloads/kibana">Kibana Download Page<a/>
+ 
+  
+**Download Kibana** - <a href="https://www.elastic.co/downloads/kibana">Kibana Download Page<a/> ,  <a href="https://www.elastic.co/guide/en/kibana/current/deb.html">Kibana Download Via Cmd<a/>
 <img src="images/5.png"> 
   Steps -<br/>
   Once it get installed 
