@@ -32,8 +32,8 @@ ___
   * Check Kibana version - <br/>1. sudo service kibana start<br/>
                                   2. sudo service kibana status<br/>
                                   3. curl http://localhost:5601 -to check kibana version<br/>
-                                  4. For kibana status - http://localhost:5601/status
-                                  5. For kibana api json response - http://localhost:5601/api/status
-                                  4. or cd /usr/share/kibana <br/>
-                                  5. ./bin/kibana --version<br/>
+                                  4. For kibana status - http://localhost:5601/status <br/>
+                                  5. For kibana api json response - http://localhost:5601/api/status <br/>
+                                  6. or cd /usr/share/kibana <br/>
+                                  7. ./bin/kibana --version<br/>
   
